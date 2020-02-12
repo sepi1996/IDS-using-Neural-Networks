@@ -14,7 +14,6 @@ from sklearn.model_selection import train_test_split
 import talos
 from datetime import datetime
 
-
 p = {'input_neuron':[32, 64, 128, 256],
      'first_neuron':[32, 64, 128, 256],
      'hidden_layers':[1, 2, 3],
@@ -23,7 +22,6 @@ p = {'input_neuron':[32, 64, 128, 256],
      'activation':['relu'],
      'batch_size': [10, 64],
      'optimizer': ['adam', 'nadam']}
-
 
 def def_model(X, y, X_val, y_val, params):
     dimX = len(X[0])
@@ -64,13 +62,9 @@ def start(XPickle, yPickle):
 
     X, X_val, y, y_val = train_test_split(X, y, test_size=0.1, random_state=42)
 
-
     print("Starting training at: ", datetime.utcnow())
     talos.Scan(x=X, y=y, x_val=X_val, y_val=y_val, params=p, model=def_model, experiment_name='talosIDS')
     print("Train finished at: ", datetime.utcnow())
-
-
-
 
 if __name__ == "__main__":
     if len(sys.argv) == 3:

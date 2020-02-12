@@ -9,8 +9,6 @@ import numpy as np
 from sklearn import preprocessing
 from random import randrange
 
-
-
 def createCSVCleaned(inFile, outFile):
     bening = beningDeleted = ftp = ssh = totalRowsDeleted = 0
     with open(inFile, 'r') as csvfile:
@@ -45,14 +43,11 @@ def createCSVCleaned(inFile, outFile):
     print('total ftp rows  = {}'.format(ftp))
     print('total bening rows = {}'.format(bening - 1))
         
-
 def createPickles(outFile):
     dataFrame = pd.read_csv(outFile)
     del dataFrame['Timestamp']
     del dataFrame['Dst Port']
     del dataFrame['Protocol']
-
-    print("Old data frame length:", len(dataFrame))
     dataFrame = shuffle(dataFrame) # mezclar los elementos
 
     en = LabelEncoder()
@@ -67,7 +62,6 @@ def createPickles(outFile):
     pickle_out = open("X.pickle", "wb")
     pickle.dump(X, pickle_out)
     pickle_out.close()
-
     pickle_out = open("y.pickle", "wb")
     pickle.dump(y, pickle_out)
     pickle_out.close()
@@ -83,7 +77,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 2:
         importData(sys.argv[1])
     else:
-        print("This program will generate a cleaned cvs (without strings) and two pickle objects (X.pickle and y.pickle) from the desired dataset")
+        print("This program will generate a cleaned csv and two pickle objects (X.pickle and y.pickle) from the input dataset")
         print('Usage: python import.py inputFile.csv')
 
         

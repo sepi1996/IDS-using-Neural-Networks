@@ -27,7 +27,6 @@ def draw_confusion_matrix(model, X, y):
     bottom, top = ax.get_ylim()
     ax.set_ylim(bottom + 0.5, top - 0.5)
 
-
     print("\n")
     FP = confusionMatrix.sum(axis=0) - np.diag(confusionMatrix)  
     FN = confusionMatrix.sum(axis=1) - np.diag(confusionMatrix)
@@ -57,7 +56,6 @@ def evaluate_test(model, X_test, y_test):
     print()
     print('Test Accuracy: %1.2f%%' % (results[1]*100))
 
-
 def def_model(X, y, X_val, y_val):
     dimX = len(X[0])
     dimy = y.shape[1]
@@ -76,7 +74,6 @@ def def_model(X, y, X_val, y_val):
     model.fit(X, y, batch_size=128, epochs=10, verbose=2, validation_data=(X_val, y_val), callbacks=[tensorbrd])
 
     return model
-
 
 def start(XPickle, yPickle):
     #Load Data
