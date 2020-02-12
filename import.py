@@ -61,18 +61,9 @@ def createPickles(outFile):
     yDataEncoded = en.transform(yData)
     y = to_categorical(yDataEncoded)
 
-    #x = dataFrame.values
-    #min_max_scaler = preprocessing.MinMaxScaler()
-    #x_scaled = min_max_scaler.fit_transform(x)
-    #df = pd.DataFrame(x_scaled)
-    #Normalizamos X
     X = pd.DataFrame(preprocessing.MinMaxScaler().fit_transform(dataFrame.values)).values
 
-
-    #print(y)
-    #print(X)
-
-
+    #Create pickle objects
     pickle_out = open("X.pickle", "wb")
     pickle.dump(X, pickle_out)
     pickle_out.close()

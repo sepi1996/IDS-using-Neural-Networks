@@ -76,5 +76,5 @@ if __name__ == "__main__":
     if len(sys.argv) == 3:
         start(sys.argv[1], sys.argv[2])
     else:
-        print("This program reproduce the behaivour of a NIDS based on the two Pickle objects produced before")
-        print('Usage: python bestIDS.py X.pickle, y.pickle')
+        print("This program will be used to find out the best model architecture")
+        print('Usage: python kerasTuner.py X.pickle, y.pickle')
