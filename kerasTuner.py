@@ -34,7 +34,8 @@ def def_model(X, y, X_val, y_val, params):
     talos.utils.hidden_layers(model, params, 1)
     
     model.add(Dense(dimy, activation='softmax'))
-    NAME = "IDS-ML-InputNeurons={}-HiddenLayers={}-HiddenNeurons={}-Dropout={}=Optimizer{}".format(params['input_neuron'], params['hidden_layers'], params['first_neuron'], params['dropout'], params['optimizer'])
+    NAME = "IDS-ML-InputNeurons={}-HiddenLayers={}-HiddenNeurons={}-Dropout={}=Optimizer{}".format(params['input_neuron'],
+		 params['hidden_layers'], params['first_neuron'], params['dropout'], params['optimizer'])
     tensorboard = TensorBoard('logsTalos1/{}'.format(NAME))
    
     #Configure Model
