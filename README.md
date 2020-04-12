@@ -38,6 +38,7 @@ Finally, as we can see in the percentages, we have much more Benign traffic than
 
 ## Architecture
 As we can see in the Kerastuner.py file, I will use <a href="https://github.com/autonomio/talos" target="_blank">**Talos**</a> for a fully automating hyperparameter tuning and model evaluation. The best results obtained are the following.
+
 ![alt text](https://user-images.githubusercontent.com/18005114/79068765-9814eb80-7cc9-11ea-9a4c-c90010f8a0f4.png)
 
 So we can extract this conclusions
