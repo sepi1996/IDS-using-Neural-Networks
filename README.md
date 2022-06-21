@@ -1,3 +1,4 @@
+For more detailed information, please check out this post on <a href="https://medium.com/analytics-vidhya/intrusion-detection-system-using-artificial-neural-networks-14afc2112be" target="_blank">**medium**</a>. 
 # NIDS based on Artificial Neural Networks
 
 In this project I will design and implement a network intrusion detection system using artificial neural networks. For so I am going to use the high-level neural networks API <a href="https://keras.io/" target="_blank">**Keras**</a> along with the dataset provided by the <a href="https://www.unb.ca/cic/datasets/ids-2018.html" target="_blank">**Communications Security Establishment (CSE) & the Canadian Institute for Cybersecurity (CIC)**</a> 
